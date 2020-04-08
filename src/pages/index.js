@@ -17,7 +17,7 @@ export default class IndexPage extends React.Component {
       <Layout>
         <SEO title="Home" />
         <h3 style={{ textAlign: "center" }}>
-          Click on your team below to access
+          click your coach to access
         </h3>
         {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           <Image />

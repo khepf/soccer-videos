@@ -59,26 +59,9 @@ export default function CoachCard() {
                   >
                     {coach.name}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                    style={{ textAlign: "center" }}
-                  >
-                    Click to access the YouTube tutorials
-                  </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions style={{ justifyContent: "center" }}>
-                <Typography
-                  variant="body2"
-                  color="textSecondary"
-                  component="h2"
-                  style={{ textAlign: "center", fontWeight: "bolder" }}
-                >
-                  Enter
-                </Typography>
-              </CardActions>
+
             </Card>
           </Link>
         </Grid>
