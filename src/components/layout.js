@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+        <footer style={{ textAlign: "center", margin: "20px" }}>
           © {new Date().getFullYear()}, Built by
           {` `}
           <a href="https://www.google.com">QCTS</a>

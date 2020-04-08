@@ -43,28 +43,45 @@ export default function CoachCard() {
     <Grid container justify="center" alignItems="center" spacing={3}>
       {coachesInfo.map((coach, index) => (
         <Grid item sm={6}>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image="/static/imgs/puma-ball.jpg"
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {coach.name}
+          <Link to={`${coach.page}`}>
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  className={classes.media}
+                  image="/static/imgs/puma-ball.jpg"
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="h2"
+                    style={{ textAlign: "center" }}
+                  >
+                    {coach.name}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                    style={{ textAlign: "center" }}
+                  >
+                    Click to access the YouTube tutorials
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions style={{ justifyContent: "center" }}>
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  component="h2"
+                  style={{ textAlign: "center", fontWeight: "bolder" }}
+                >
+                  Enter
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Click below to access the YouTube tutorials
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="large" color="primary">
-                <Link to={`${coach.page}`}>Enter</Link>
-              </Button>
-            </CardActions>
-          </Card>
+              </CardActions>
+            </Card>
+          </Link>
         </Grid>
       ))}
     </Grid>

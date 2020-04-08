@@ -16,7 +16,9 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO title="Home" />
-        <p>Click on your team below to access</p>
+        <h3 style={{ textAlign: "center" }}>
+          Click on your team below to access
+        </h3>
         {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
           <Image />
         </div> */}
