@@ -10,7 +10,6 @@ const SecondPage = () => (
     <SEO title="Page two" />
     <h1 style={{ textAlign: "center" }}>Coach Kevin</h1>
     <p style={{ textAlign: "center" }}>Click on each embedded video to play.</p>
-    <h2 style={{ textAlign: "center" }}>Week of 3/30</h2>
     <VideoCard owner="Coach Kevin" releasedate="March 26th" />
     <VideoCard owner="Coach Kevin" releasedate="April 1st" />
     <VideoCard owner="Coach Kevin" releasedate="April 4th" />
