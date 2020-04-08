@@ -1,27 +1,9 @@
-import { Link } from "gatsby"
 import React from "react"
 import YouTube from "react-youtube"
 
 import Grid from "@material-ui/core/Grid"
-import { makeStyles } from "@material-ui/core/styles"
-import Card from "@material-ui/core/Card"
-import CardActionArea from "@material-ui/core/CardActionArea"
-import CardActions from "@material-ui/core/CardActions"
-import CardContent from "@material-ui/core/CardContent"
-import CardMedia from "@material-ui/core/CardMedia"
-import Typography from "@material-ui/core/Typography"
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-})
 
 export default function VideoCard(props) {
-  const classes = useStyles()
 
   const videos = 
    [
@@ -92,15 +74,24 @@ export default function VideoCard(props) {
   
 
   return (
-    <Grid container justify="center" alignItems="center" spacing={3}>
+    <Grid
+      container
+      justify="center"
+      alignItems="center"
+      spacing={3}
+    >
       {videos
-      .filter((video) => video.owner === props.owner && video.releasedate === props.releasedate)
-      .map((video, index) => (
-        <Grid item direction="column">
-          <h3 style={{ textAlign: "center" }}>{video.title}</h3>
-          <YouTube videoId={video.linkname}></YouTube>
-        </Grid>
-      ))}
+        .filter(
+          video =>
+            video.owner === props.owner &&
+            video.releasedate === props.releasedate
+        )
+        .map((video, index) => (
+          <Grid item key={video.id}>
+            <h3 style={{ textAlign: "center" }}>{video.title}</h3>
+            <YouTube videoId={video.linkname}></YouTube>
+          </Grid>
+        ))}
     </Grid>
   )
 }
