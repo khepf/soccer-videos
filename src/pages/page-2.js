@@ -13,6 +13,7 @@ const SecondPage = () => (
     <VideoCard owner="Coach Kevin" releasedate="March 26th" />
     <VideoCard owner="Coach Kevin" releasedate="April 1st" />
     <VideoCard owner="Coach Kevin" releasedate="April 4th" />
+    <VideoCard owner="Coach Kevin" releasedate="April 8th" />
   </Layout>
 )
 
